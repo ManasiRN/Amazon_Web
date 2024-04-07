@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date(); 
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br>on " + date;
+        }, 1000);
+    </script>
+    <style>
+       
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .nav{
+        height: 60px;
+        background-color: #222f3d;
+        
+    }
+    .img{
+        background-image: url("amazon_logo.png");
+    background-size:cover ;
+    height: 50px;
+    width: 100px;
+    text-align: cente 
+    }
+    body{
+        background-color: whitesmoke;
+    }
+
+        .jumbo{
+            width: 800px; 
+            height: 500px; 
+            border: 10px solid black;
+            margin-top: 50px;
+            margin-left: 280px;
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: black;
+            background-color: rgb(234, 234, 242);
+        }
+        
+        .jumbo:hover{
+            background-color:black ;
+            color: white;
+        }
+        .display-4{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="img"></div>
+    </div>
+        <div class="jumbo">
+            <h1 class="display-4"> INDIAN AMAZON Current time Is: <span id="time"></span></h1>
+            <p class="lead">We have got you covered. This is a simple hero unit, a simple jumbotron-style component for
+                calling extra attention to featured content or information.</p>
+            <hr>
+            <p>We are here to show you the time for different countries</p>
+            <button><a href="#">Browse Times</a></button>
+        </div>
+</body>
+</html>
